@@ -22,3 +22,11 @@ flowchart LR
   CF -->|Private origin access| S3[(S3 Bucket - Private)]
   ACM[ACM Certificate us-east-1] --> CF
 ```
+
+### AWS Architecture Diagram:
+![AWS architecture diagram](architecture/aws-static-site-cloudfront-s3.drawio.png)
+
+
+
+
+

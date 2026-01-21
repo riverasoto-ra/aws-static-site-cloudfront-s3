@@ -14,9 +14,11 @@ This repository contains the static site files, the architecture, and the deploy
 - **CloudFront**: CDN + HTTPS endpoint; redirects HTTP → HTTPS
 - **S3 (private)**: Origin bucket containing `index.html` and assets; public access blocked
 
-### Diagram (high-level)
-mermaid flowchart LR
+### Mermaid Diagram:
+```mermaid
+flowchart LR
   U[User Browser] -->|DNS lookup| R53[Route 53 Hosted Zone]
   U -->|HTTPS| CF[CloudFront Distribution]
   CF -->|Private origin access| S3[(S3 Bucket - Private)]
-  ACM[ACM Certificate (us-east-1)] --> CF
+  ACM[ACM Certificate us-east-1] --> CF
+```
